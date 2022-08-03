@@ -91,7 +91,7 @@ print('RSquared :','{:.2%}'.format(r2_score(test_label,test_predicted)))
 
 # Merging actual and predicted data for better visualization
 
-gs_slic_data = pd.concat([data_btc.iloc[-285:].copy(),pd.DataFrame(test_inverse_predicted,columns=['Open_predicted','Close_predicted'],index=data_btc.iloc[-285:].index)], axis=1)
+gs_slic_data = pd.concat([data_btc.iloc[-284:].copy(),pd.DataFrame(test_inverse_predicted,columns=['Open_predicted','Close_predicted'],index=data_btc.iloc[-284:].index)], axis=1)
 gs_slic_data[['Open','Close']] = MMS.inverse_transform(gs_slic_data[['Open','Close']]) # Inverse scaling
 
 
