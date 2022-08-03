@@ -101,7 +101,7 @@ st.write("""
 # Perbandingan Hasil Prediksi dengan data actual
 """)
 gs_slic_data = gs_slic_data.append(pd.DataFrame(columns=gs_slic_data.columns,index=pd.date_range(start=gs_slic_data.index[-1], periods=100 , freq='D', closed='right')))
-gs_slic_data['2022-07-01	':'2022-07-30']
+gs_slic_data['2022-07-01	':'2022-08-03']
 
 upcoming_prediction = pd.DataFrame(columns=['Open','Close'],index=gs_slic_data.index)
 upcoming_prediction.index=pd.to_datetime(upcoming_prediction.index)
