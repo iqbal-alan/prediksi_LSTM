@@ -27,7 +27,7 @@ st.write("""
 """)
 
 
-data_btc = pd.read_csv('BTC-USD (4).csv')
+data_btc = pd.read_csv('BTC-USD (5).csv')
 st.dataframe(data_btc)
 data_btc = data_btc[['Date','Open','Close']] # Extracting required columns
 data_btc['Date'] = pd.to_datetime(data_btc['Date'].apply(lambda x: x.split()[0])) # Selecting only date
@@ -77,7 +77,7 @@ test_seq, test_label = create_sequence(test_data)
 
 
 
-loaded_model = tf.keras.models.load_model("model_LSTM_99%.h5")
+loaded_model = tf.keras.models.load_model("model_final.h5")
 loaded_model.build()
 
 
