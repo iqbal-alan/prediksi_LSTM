@@ -27,7 +27,7 @@ st.write("""
 """)
 
 
-data_btc = pd.read_csv('BTC-USD (5).csv')
+data_btc = pd.read_csv('BTC-USD (6).csv')
 st.dataframe(data_btc)
 data_btc = data_btc[['Date','Open','Close']] # Extracting required columns
 data_btc['Date'] = pd.to_datetime(data_btc['Date'].apply(lambda x: x.split()[0])) # Selecting only date
@@ -91,7 +91,7 @@ print('RSquared :','{:.2%}'.format(r2_score(test_label,test_predicted)))
 
 # Merging actual and predicted data for better visualization
 
-gs_slic_data = pd.concat([data_btc.iloc[-284:].copy(),pd.DataFrame(test_inverse_predicted,columns=['Open_predicted','Close_predicted'],index=data_btc.iloc[-284:].index)], axis=1)
+gs_slic_data = pd.concat([data_btc.iloc[-283:].copy(),pd.DataFrame(test_inverse_predicted,columns=['Open_predicted','Close_predicted'],index=data_btc.iloc[-283:].index)], axis=1)
 gs_slic_data[['Open','Close']] = MMS.inverse_transform(gs_slic_data[['Open','Close']]) # Inverse scaling
 
 
