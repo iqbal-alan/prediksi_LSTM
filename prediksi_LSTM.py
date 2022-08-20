@@ -27,7 +27,7 @@ st.write("""
 """)
 
 
-data_btc = pd.read_csv('BTC-USD (6).csv')
+data_btc = pd.read_csv('BTC-USD (7).csv')
 st.dataframe(data_btc)
 data_btc = data_btc[['Date','Open','Close']] # Extracting required columns
 data_btc['Date'] = pd.to_datetime(data_btc['Date'].apply(lambda x: x.split()[0])) # Selecting only date
